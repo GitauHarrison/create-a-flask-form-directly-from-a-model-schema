@@ -106,3 +106,4 @@ It is possible that you can create forms based on a model's schema. Rather than 
     ```python
     (venv)$ flask run
     ```
+* Access the application on http://127.0.0.1:5000/
