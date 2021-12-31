@@ -2,6 +2,7 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
+    <!-- Form -->
    <div class="row">
         <div class="col-sm-4">
             <!-- Empty column -->
@@ -18,5 +19,26 @@
        <div class="col-sm-4">
            <!-- Empty column -->
        </div>
+   </div>
+
+   <hr>
+
+   <!-- Display data from database -->
+   <div class="row db-data">
+       <h1 class="text-center">Data from Database</h1>
+       <div class="col-sm-4">
+           <!-- Empty column -->
+       </div>
+       <div class="col-sm-4">
+            {% for obj in teacher_objectives %}
+            <ul>
+                <li>{{ obj.teacher_objective_1 }}</li>
+                <li>{{ obj.teacher_objective_2 }}</li>
+            </ul>
+            {% endfor %}
+        </div>
+        <div class="col-sm-4">
+            <!-- Empty column -->
+        </div>
    </div>
 {% endblock %}

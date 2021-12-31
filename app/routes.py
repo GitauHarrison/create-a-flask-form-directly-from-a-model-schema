@@ -25,7 +25,11 @@ def index():
             return redirect(url_for('index'))
     else:
         form = TeacherObjectivesForm(obj=teacher_objectives)
+
+    # Display data from the database
+    teacher_objectives = TeacherObjectives.query.all()
     return render_template(
         'index.html',
-        form=form
+        form=form,
+        teacher_objectives=teacher_objectives
         )
