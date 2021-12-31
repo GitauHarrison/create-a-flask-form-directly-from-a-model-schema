@@ -9,3 +9,6 @@ class Config(object):
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_ECHO = True
+
+    # Form
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
